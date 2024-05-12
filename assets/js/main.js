@@ -9,11 +9,31 @@ $(document).ready(function() {
     asNavFor: '.slider-nav'
   });
   $('.slider-nav').slick({
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: '.slider-for',
-    dots: true,
+    dots: false,
     centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
   });
 });
